@@ -46,6 +46,7 @@ Compiling configuration and lint configuration are in `/tsconfig.json` and `/tsl
 
 ## Clean
 
+`npm run clean`
 This will remove all the complied asset in `/dist`.
 
 ## Test
