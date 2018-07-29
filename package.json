@@ -4,11 +4,11 @@
   "description": "application server for kenmyo project, responsible for authentication through cognito and forwarding request to related services",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && sam local start-api",
-    "test": "scripts/test",
+    "start": "npm run build && KENMYO_ENV=TEST:LOCAL_INTEGRATE sam local start-api",
+    "test": "bash -c \"scripts/test\"",
     "build": "tslint -p ./tsconfig.json --fix && tsc && bash -c \"cp package.json dist \" && cd dist && npm install --production",
     "clean": "bash -c \"rm -rf dist\"",
-    "deploy": "npm run clean && npm run build && scripts/deploy"
+    "deploy": "npm run clean && npm run build && bash -c \"scripts/deploy\""
   },
   "repository": {
     "type": "git",
